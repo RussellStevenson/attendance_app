@@ -5,6 +5,8 @@ import 'attendance_record_screen.dart';
 import 'check_in_screen.dart';
 import 'inbox_screen.dart';
 import 'module_screen.dart';
+import 'login.dart';
+import 'user_registration.dart';
 
 void main() => runApp(
   ChangeNotifierProvider(
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Attendance App',
-      home: HomeScreen(),
+      home: LoginPage(),
     );
   }
 }
@@ -41,13 +43,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Attendance App'),
-        backgroundColor: Colors.grey, // Set the navigation bar color
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 16.0), // Adjust the padding as needed
+        child: _screens[_currentIndex],
       ),
-      body: _screens[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, // Ensure items fit within the screen
+        type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
         onTap: (index) {
           setState(() {
@@ -76,6 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
 
 // Create a class to manage the attendance data using the Provider package
 class AttendanceData with ChangeNotifier {
