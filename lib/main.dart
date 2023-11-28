@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'attendance_record_screen.dart';
 import 'check_in_screen.dart';
 import 'inbox_screen.dart';
+import 'module_screen.dart';
 
 void main() => runApp(
   ChangeNotifierProvider(
@@ -11,6 +12,7 @@ void main() => runApp(
     child: MyApp(),
   ),
 );
+
 
 class MyApp extends StatelessWidget {
   @override
@@ -31,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _screens = [
     CheckInScreen(),
-    AttendanceRecordScreen(),
+    ModuleScreen(),
     InboxScreen(),
     MoreScreen(),
   ];
@@ -59,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
-            label: 'Attendance Record',
+            label: 'Module',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.mail),

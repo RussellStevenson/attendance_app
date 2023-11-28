@@ -4,13 +4,27 @@ import 'package:provider/provider.dart';
 class CheckInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: ElevatedButton(
-        onPressed: () {
-          // Call the checkIn function to update the check-in time
-          Provider.of<AttendanceData>(context, listen: false).checkIn();
-        },
-        child: Text('Check In'),
+    return Align(
+      alignment: Alignment.bottomCenter,
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          vertical: 16.0,   // top and bottom padding
+        ).add(
+          EdgeInsets.symmetric(
+            horizontal: 120.0,  // left and right padding
+          ),
+        ),
+        decoration: BoxDecoration(
+          color: Colors.grey[400], // Set the background color of the box
+          borderRadius: BorderRadius.circular(10.0), // Set the border radius
+        ),
+        child: ElevatedButton(
+          onPressed: () {
+            // Call the checkIn function to update the check-in time
+            Provider.of<AttendanceData>(context, listen: false).checkIn();
+          },
+          child: Text('Check In'),
+        ),
       ),
     );
   }
