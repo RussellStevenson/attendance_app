@@ -9,18 +9,48 @@ class RegistrationPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
-              decoration: InputDecoration(labelText: 'Name'),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25.0),
+                color: Colors.grey[200],
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Enter your name',
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                  border: InputBorder.none,
+                ),
+              ),
             ),
             SizedBox(height: 16.0),
-            TextField(
-              decoration: InputDecoration(labelText: 'Email'),
-              keyboardType: TextInputType.emailAddress,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25.0),
+                color: Colors.grey[200],
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Enter your email',
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                  border: InputBorder.none,
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
             ),
             SizedBox(height: 16.0),
-            TextField(
-              decoration: InputDecoration(labelText: 'Password'),
-              obscureText: true,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25.0),
+                color: Colors.grey[200],
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Enter your password',
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                  border: InputBorder.none,
+                ),
+                obscureText: true,
+              ),
             ),
             SizedBox(height: 16.0),
             ElevatedButton(

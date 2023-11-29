@@ -9,14 +9,34 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextField(
-              decoration: InputDecoration(labelText: 'Email'),
-              keyboardType: TextInputType.emailAddress,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25.0), // Adjust the radius as needed
+                color: Colors.grey[200], // Set the background color
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Email',
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                  border: InputBorder.none,
+                ),
+                keyboardType: TextInputType.emailAddress,
+              ),
             ),
             SizedBox(height: 16.0),
-            TextField(
-              decoration: InputDecoration(labelText: 'Password'),
-              obscureText: true,
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(25.0),
+                color: Colors.grey[200],
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Password',
+                  contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
+                  border: InputBorder.none,
+                ),
+                obscureText: true,
+              ),
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
