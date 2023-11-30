@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'login.dart';
 
 class MoreScreen extends StatelessWidget {
   @override
@@ -34,7 +35,10 @@ class MoreScreen extends StatelessWidget {
           ListTile(
             title: Text('Log Out'),
             onTap: () {
-              Navigator.of(context).pop();
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPage()), // Replace MainPage with your actual main page
+              );
             },
           )
           // Add more options as needed

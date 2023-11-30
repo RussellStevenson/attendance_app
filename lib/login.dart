@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -41,6 +42,10 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()), // Replace MainPage with your actual main page
+                );
                 // Add login logic here
               },
               child: Text('Login'),
