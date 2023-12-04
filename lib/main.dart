@@ -82,19 +82,3 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 
-// Create a class to manage the attendance data using the Provider package
-class AttendanceData with ChangeNotifier {
-  List<String> attendanceRecords = [];
-
-  void checkIn() {
-    // Get the current time (you may need to import the 'intl' package for formatting)
-    String currentTime = DateTime.now().toLocal().toString();
-
-    // Add the check-in time to the list
-    attendanceRecords.add(currentTime);
-
-    // Notify listeners to update the UI
-    notifyListeners();
-  }
-}
-

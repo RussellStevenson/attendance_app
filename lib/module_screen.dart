@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'attendance_record_screen.dart';
 
 class ModuleScreen extends StatelessWidget {
-  const ModuleScreen({super.key});
+  const ModuleScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +28,11 @@ class ModuleScreen extends StatelessWidget {
                     },
                     child: Container(
                       height: 150.0,
-                      color: Colors.blue,
                       margin: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15.0), // Set the circular border radius
+                      ),
                       child: const Center(
                         child: Text('Attendance Record'),
                       ),
@@ -44,8 +47,11 @@ class ModuleScreen extends StatelessWidget {
                     },
                     child: Container(
                       height: 150.0,
-                      color: Colors.blue,
                       margin: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15.0), // Set the circular border radius
+                      ),
                       child: const Center(
                         child: Text('Container 2'),
                       ),
@@ -65,8 +71,11 @@ class ModuleScreen extends StatelessWidget {
                     },
                     child: Container(
                       height: 150.0,
-                      color: Colors.blue,
                       margin: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15.0), // Set the circular border radius
+                      ),
                       child: const Center(
                         child: Text('Container 3'),
                       ),
@@ -81,8 +90,11 @@ class ModuleScreen extends StatelessWidget {
                     },
                     child: Container(
                       height: 150.0,
-                      color: Colors.blue,
                       margin: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15.0), // Set the circular border radius
+                      ),
                       child: const Center(
                         child: Text('Container 4'),
                       ),
@@ -102,8 +114,11 @@ class ModuleScreen extends StatelessWidget {
                     },
                     child: Container(
                       height: 150.0,
-                      color: Colors.blue,
                       margin: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15.0), // Set the circular border radius
+                      ),
                       child: const Center(
                         child: Text('Container 5'),
                       ),
@@ -118,8 +133,11 @@ class ModuleScreen extends StatelessWidget {
                     },
                     child: Container(
                       height: 150.0,
-                      color: Colors.blue,
                       margin: const EdgeInsets.all(8.0),
+                      decoration: BoxDecoration(
+                        color: Colors.blue,
+                        borderRadius: BorderRadius.circular(15.0), // Set the circular border radius
+                      ),
                       child: const Center(
                         child: Text('Container 6'),
                       ),
@@ -134,4 +152,5 @@ class ModuleScreen extends StatelessWidget {
     );
   }
 }
+
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'attendance_record_screen.dart';
 
 class CheckInScreen extends StatelessWidget {
   const CheckInScreen({super.key});
