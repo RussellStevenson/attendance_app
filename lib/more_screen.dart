@@ -2,42 +2,44 @@ import 'package:flutter/material.dart';
 import 'login.dart';
 
 class MoreScreen extends StatelessWidget {
+  const MoreScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('More'),
+        title: const Text('More'),
         backgroundColor: Colors.grey, // Set the navigation bar color
       ),
 
       body: ListView(
         children: [
           ListTile(
-            title: Text('Edit Profile'),
+            title: const Text('Edit Profile'),
             onTap: () {
               // Handle Edit Profile option
               Navigator.of(context).pop(); // Close the drawer or navigate
             },
           ),
           ListTile(
-            title: Text('Settings'),
+            title: const Text('Settings'),
             onTap: () {
               // Handle Settings option
               Navigator.of(context).pop(); // Close the drawer or navigate
             },
           ),
           ListTile(
-            title: Text('Change Password'),
+            title: const Text('Change Password'),
             onTap: () {
               Navigator.of(context).pop();
             },
           ),
           ListTile(
-            title: Text('Log Out'),
+            title: const Text('Log Out'),
             onTap: () {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => LoginPage()), // Replace MainPage with your actual main page
+                MaterialPageRoute(builder: (context) => const LoginPage()), // Replace MainPage with your actual main page
               );
             },
           )

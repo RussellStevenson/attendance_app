@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'main.dart';
 
 class RegistrationPage extends StatelessWidget {
+  const RegistrationPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,7 +17,7 @@ class RegistrationPage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(25.0),
                 color: Colors.grey[200],
               ),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter your name',
                   contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -22,13 +25,13 @@ class RegistrationPage extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 color: Colors.grey[200],
               ),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter your email',
                   contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -37,13 +40,13 @@ class RegistrationPage extends StatelessWidget {
                 keyboardType: TextInputType.emailAddress,
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             Container(
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(25.0),
                 color: Colors.grey[200],
               ),
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                   hintText: 'Enter your password',
                   contentPadding: EdgeInsets.symmetric(horizontal: 16.0),
@@ -52,12 +55,15 @@ class RegistrationPage extends StatelessWidget {
                 obscureText: true,
               ),
             ),
-            SizedBox(height: 16.0),
+            const SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () {
-                // Add registration logic here
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()), // Replace MainPage with your actual main page
+                );
               },
-              child: Text('Register'),
+              child: const Text('Register'),
             ),
           ],
         ),

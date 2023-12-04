@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class CheckInScreen extends StatelessWidget {
+  const CheckInScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Container(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           vertical: 16.0,   // top and bottom padding
         ).add(
-          EdgeInsets.symmetric(
+          const EdgeInsets.symmetric(
             horizontal: 120.0,  // left and right padding
           ),
         ),
@@ -23,7 +25,7 @@ class CheckInScreen extends StatelessWidget {
             // Call the checkIn function to update the check-in time
             Provider.of<AttendanceData>(context, listen: false).checkIn();
           },
-          child: Text('Check In'),
+          child: const Text('Check In'),
         ),
       ),
     );
