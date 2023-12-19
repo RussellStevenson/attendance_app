@@ -35,6 +35,18 @@ class MoreScreen extends StatelessWidget {
             },
           ),
           ListTile(
+            title: const Text('About Us'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
+            title: const Text('Terms of Use'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
             title: const Text('Log Out'),
             onTap: () {
               Navigator.pushReplacement(
