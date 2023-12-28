@@ -22,9 +22,9 @@ class MoreScreen extends StatelessWidget {
             },
           ),
           ListTile(
-            title: const Text('Settings'),
+            title: const Text('Change Zone'),
             onTap: () {
-              // Handle Settings option
+              // Handle Edit Profile option
               Navigator.of(context).pop(); // Close the drawer or navigate
             },
           ),
@@ -35,6 +35,35 @@ class MoreScreen extends StatelessWidget {
             },
           ),
           ListTile(
+            title: const Text('Change Language'),
+            onTap: () {
+              // Handle Edit Profile option
+              Navigator.of(context).pop(); // Close the drawer or navigate
+            },
+          ),
+          ListTile(
+            title: const Text('Manual Entry Attendance'),
+            onTap: () {
+              // Handle Edit Profile option
+              Navigator.of(context).pop(); // Close the drawer or navigate
+            },
+          ),
+          ListTile(
+            title: const Text('Help Section'),
+            onTap: () {
+              // Handle Edit Profile option
+              Navigator.of(context).pop(); // Close the drawer or navigate
+            },
+          ),
+          ListTile(
+            title: const Text('Settings'),
+            onTap: () {
+              // Handle Settings option
+              Navigator.of(context).pop(); // Close the drawer or navigate
+            },
+          ),
+
+          ListTile(
             title: const Text('About Us'),
             onTap: () {
               Navigator.of(context).pop();
@@ -44,6 +73,13 @@ class MoreScreen extends StatelessWidget {
             title: const Text('Terms of Use'),
             onTap: () {
               Navigator.of(context).pop();
+            },
+          ),
+          ListTile(
+            title: const Text('Privacy Policy'),
+            onTap: () {
+              // Handle Edit Profile option
+              Navigator.of(context).pop(); // Close the drawer or navigate
             },
           ),
           ListTile(
